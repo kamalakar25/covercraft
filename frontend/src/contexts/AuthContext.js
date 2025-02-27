@@ -61,6 +61,7 @@ export const AuthProvider = ({ children }) => {
 
       localStorage.setItem("token", token);
       localStorage.setItem("user", JSON.stringify(user));
+      localStorage.setItem("userEmail", user.email);
       axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
       setUser(user);
